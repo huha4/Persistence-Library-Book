@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="655a7011-9f5b-4bb7-ad77-c07541720e3b">
+	<property name="ireport.zoom" value="1.3310000000000035"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="querySearch" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="searchBy" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from peminjaman_skripsi]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="angkatan" class="java.lang.String"/>
+	<field name="idSkripsi" class="java.lang.String"/>
+	<field name="judulSkripsi" class="java.lang.String"/>
+	<field name="tanggal" class="java.util.Date"/>
+	<field name="jumlah" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="18" width="179" height="24" uuid="78a7b389-704b-4767-a330-fa897e6d6d0f"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Information Systems]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="42" width="175" height="24" uuid="ba9ec303-33f7-47e6-a197-d7650523f50f"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bibliography Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="48" width="555" height="1" uuid="48e93687-16bf-4ff4-94b8-d8990670c946"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="13" width="477" height="20" uuid="9c7a38af-6f27-4d0d-849e-1257af337332"/>
+				<textFieldExpression><![CDATA["Search results from " + $P{querySearch} +" based on the column " + $P{searchBy} +" the results are:"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="43" height="20" uuid="2521fb67-3053-43c3-9dd2-8577eb0e8b35"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="0" width="100" height="20" uuid="c8ba8f49-b565-4cdb-bfbb-f7095c97eb69"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="0" width="34" height="20" uuid="d31b961e-d737-4b0f-b412-f2b2a286eae2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="0" width="51" height="20" uuid="8bf2826c-01a9-4c9b-a681-f39c8edd2db6"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Skripsi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="163" height="20" uuid="6a9a426c-de94-486b-8bc2-a4fdea07ada2"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="0" width="61" height="20" uuid="97dd48ea-ca60-4fa6-8f24-a78ad7f8454c"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="0" width="25" height="20" uuid="dd628667-2e77-4b83-b07b-166b6c899d7b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="0" width="78" height="20" uuid="b95b644c-fbbb-4a17-98b6-616409c27bd5"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="43" height="20" uuid="fba6b039-2fa4-4d64-a0a7-90eb237bc11e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="0" width="100" height="20" uuid="fbc7feb2-e833-4927-93c2-ad0631769095"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="0" width="34" height="20" uuid="eb23aa78-bc92-46ac-b1da-40b6703888ec"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{angkatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="0" width="51" height="20" uuid="3d40999e-1d29-42e4-8f90-7bd7d89c7231"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idSkripsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="163" height="20" uuid="44690d00-c510-440a-9ade-91460e3b7d74"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{judulSkripsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="0" width="61" height="20" uuid="f9a26ad6-6243-414c-a991-c1dad543da92"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="0" width="25" height="20" uuid="d381ac43-38e7-4d8a-932b-42eca3a586a7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="0" width="78" height="20" uuid="193793f4-4fe2-4fee-95f6-66be4dd9fa3c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="086c0bac-35f0-438b-b687-bc2340609200"/>
+			</line>
+			<line>
+				<reportElement x="0" y="19" width="555" height="1" uuid="f6e44030-9d93-4797-86ee-610fe9b5f50e"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="391" y="12" width="46" height="14" uuid="52466054-adb3-4be0-8df8-f5edb4443d3d"/>
+				<text><![CDATA[Surabaya,]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="439" y="12" width="100" height="14" uuid="6819d322-181e-407e-8889-3acec4619171"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="391" y="29" width="148" height="14" uuid="57df3bdb-65a8-4075-a5cc-35398307266f"/>
+				<text><![CDATA[Head of the Information Systems]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="43" width="148" height="14" uuid="25dc22bb-3d61-4a11-b4f5-30bf9e287670"/>
+				<text><![CDATA[Study Program]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="102" width="148" height="14" uuid="e0aa8bc9-e0b1-4b99-b5d5-40836a0d1107"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dwi Rolliawati, M.T]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="43" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

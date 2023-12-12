@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7cf85935-d94d-43e7-a5da-f4d1b644aecc">
+	<property name="ireport.zoom" value="1.3310000000000015"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="querySearch" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="searchBy" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from peminjaman_buku]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="angkatan" class="java.lang.String"/>
+	<field name="isbn" class="java.lang.String"/>
+	<field name="judulBuku" class="java.lang.String"/>
+	<field name="kategori" class="java.lang.String"/>
+	<field name="tanggal" class="java.util.Date"/>
+	<field name="jumlah" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="18" width="179" height="24" uuid="8b017d0b-0b1b-427f-a3f9-c95541a4264e"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Information Systems]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="42" width="174" height="24" uuid="2e470179-b0db-49c3-bfd2-1cfe31c4f470"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bibliography Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="53" width="555" height="1" uuid="e068e955-d0de-486f-bce8-b11b21728f13"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="17" width="484" height="20" uuid="fd88367b-ba62-455b-8225-d675c813e591"/>
+				<textFieldExpression><![CDATA["Search results from " + $P{querySearch} +" based on the column " + $P{searchBy} +" the results are:"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="44" height="20" uuid="17d8ae66-a804-4195-872e-066a4ad34ad7"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="0" width="94" height="20" uuid="177cfad8-8b95-48d5-8f55-a425f1c8d31e"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="32" height="20" uuid="6fcd4648-5453-4c7d-aad6-8ba0e97df45b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="48" height="20" uuid="409efaf2-6a9b-433d-b7ed-463029e6c262"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="123" height="20" uuid="79fedb4b-d6ae-409c-8b31-3b650bc2ec67"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="0" width="55" height="20" uuid="bfd2b6d5-55c3-4ce2-a4d1-8122109ff524"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Categories]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="0" width="67" height="20" uuid="70646c1a-b5ce-4008-8087-6f775c6a60f6"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="0" width="21" height="20" uuid="d1a5b58f-ac6a-4f0d-b9dd-a81a22e41cfe"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NoB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="0" width="71" height="20" uuid="18ff49fc-f464-4b82-ae6b-c4e0d4aadd56"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="19" width="555" height="1" uuid="d62609aa-ae23-486c-b95e-9ad7f2627d12"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="44" height="20" uuid="3ef410a2-5ad5-4d21-9ba0-e006ab01add9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="44" y="0" width="94" height="20" uuid="8ee49b36-0fab-4781-8975-97bdfb6586ca"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="32" height="20" uuid="393f14e3-4fa3-468a-8a84-052c6c9a9a8a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{angkatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="48" height="20" uuid="db294401-7afe-4913-9a0c-0c03f5daf261"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{isbn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="0" width="123" height="20" uuid="1513560e-7902-4b19-a9bf-f044cd0941c7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{judulBuku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="0" width="55" height="20" uuid="c9d5b6d4-7ae2-4b22-9289-0173d611692b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="67" height="20" uuid="fe2d9330-86a2-49e7-a2b1-be67059e575c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="21" height="20" uuid="22753fdc-34ac-479d-abe7-7ce5717e703f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="71" height="20" uuid="97ff5f7f-cebb-484b-a13e-82fdb86edac1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="32a0a20d-6731-4d55-8f9e-d006c169c229"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="118" splitType="Stretch">
+			<staticText>
+				<reportElement x="392" y="14" width="46" height="14" uuid="7d1e9bc1-2f9f-4047-8245-f7c69586594a"/>
+				<text><![CDATA[Surabaya,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="31" width="148" height="14" uuid="73222164-1639-4eca-bdac-4d6131cab203"/>
+				<text><![CDATA[Head of the Information Systems]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="45" width="71" height="14" uuid="e847e026-4bca-41d3-ab49-24acf466e1ff"/>
+				<text><![CDATA[Study Program]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="104" width="104" height="14" uuid="5151da11-a622-4cc0-8156-c46ab5b627df"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dwi Rolliawati, M.T]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
